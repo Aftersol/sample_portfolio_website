@@ -85,8 +85,6 @@ header
     border-bottom-color: grey;
     border-bottom-width: 1px;
 
-
-
     overflow: hidden; /* Prevents header from scrolling down */
 
     flex-wrap: wrap;

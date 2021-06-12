@@ -3,11 +3,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- No search engine robots please -->
+        <meta name="robots" content="noindex">
+
         <link rel="icon" href="assets/images/icon.png">
 
         <link rel="stylesheet" href="assets/styles/common/header.css">
         <link rel="stylesheet" href="assets/styles/common/common.css">
         <link rel="stylesheet" href="assets/styles/common/article.css">
+        <link rel="stylesheet" href="assets/styles/common/footer.css">
+        <link rel="stylesheet" href="assets/styles/contact.css">
 
         <title>Home</title>
     </head>
@@ -27,9 +32,31 @@
                 </div>
             </header> 
             <article>
-                <h1>Contact Me</h1>
-                <p>Email: about@example.com</p>
+                <div class="main-article">
+                    <h1>Contact Me</h1>
+                    <p>Email: about@example.com</p>
+
+                    <form class = "contact-form">
+
+                        <label for="fname">First Name</label>
+                        <input class="input-bar" type="text" id="fname" name="firstname" placeholder="Your name...">
+                    
+                        <label for="lname">Last Name</label>
+                        <input class="input-bar" type="text" id="lname" name="lastname" placeholder="Your last name...">
+
+                        <label for="email">Email</label>
+                        <input class="input-bar" type="text" id="email" name="email" placeholder="Your email...">
+                    
+                        <label for="subject">Subject</label>
+                        <textarea class="input-bar" id="subject" name="subject" placeholder="Write something..." style="height:500px"></textarea>
+                        
+                        <!-- Disabled because we didn't set up the infrastructure for the contact yet -->
+                        <input class="submit-button" type="submit" value="Submit" disabled>
+                    
+                    </form>
+                </div>
             </article>
+            <footer>Copyright 2021</footer>
         </main>
     </body>
 </html>

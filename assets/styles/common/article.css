@@ -33,3 +33,16 @@ article
     border-width: 1px;
     border-color: grey;
 }
+
+article div.main-article
+{
+    padding: 12pt;
+}
+
+@media screen and (min-width: 768px)
+{
+    div.main-article h1 
+    {
+        font-size: 36pt;
+    }
+}
