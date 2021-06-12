@@ -1,0 +1,120 @@
+@media screen and (max-width: 767px) {
+    header
+    {
+        font-size: 12pt;
+    }
+
+    header .header-menu 
+    {
+        padding: 0 12pt;
+    }
+    header .header-icon
+    {
+        padding: 0 12pt;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    header
+    {
+        font-size: 24pt;
+    }
+
+    header .header-menu
+    {
+        padding: 0 12pt;
+    }
+
+    header .header-icon
+    {
+        padding: 0 12pt;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    header
+    {
+        background-color: white;
+    }
+
+    header a
+    {
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    header
+    {
+        background-color: #333333;
+    }
+
+    header a
+    {
+        color: white;
+    }
+
+    header a:hover
+    {
+        color: #eeeeee;
+    }
+
+    header a:active
+    {
+        color: #777777;
+    }
+
+    header a:visited
+    {
+        color: white;
+    }
+}
+
+header 
+{
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    /* Borders for the header */
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-color: grey;
+    border-bottom-width: 1px;
+
+
+
+    overflow: hidden; /* Prevents header from scrolling down */
+
+    flex-wrap: wrap;
+}
+
+header a
+{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 360px) { /* Worst case scenario for Samsung Galaxy Fold devices */
+    .header-icon img
+    {
+        width: 32px;
+        flex-shrink: 0;
+    }
+}
+@media screen and (min-width: 361px) {
+    .header-icon
+    {
+        width: auto;
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
