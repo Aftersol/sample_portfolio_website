@@ -4,11 +4,7 @@
         font-size: 12pt;
     }
 
-    header .header-menu 
-    {
-        padding: 0 12pt;
-    }
-    header .header-icon
+    header .header-menu, header .header-icon
     {
         padding: 0 12pt;
     }
@@ -18,16 +14,19 @@
     header
     {
         font-size: 24pt;
+        margin-bottom: 12pt;
     }
 
-    header .header-menu
+    header .header-menu, header .header-icon
     {
         padding: 0 12pt;
     }
 
-    header .header-icon
+    header .link-button
     {
-        padding: 0 12pt;
+        padding-right: 6pt;
+        padding-left: 6pt;
+
     }
 }
 
@@ -40,6 +39,21 @@
     header a
     {
         color: black;
+    }
+
+    header a:hover
+    {
+        color: #4b4a4a;
+    }
+
+    header a:active
+    {
+        color: #b6b6b6;
+    }
+
+    header a:visited
+    {
+        color: rgb(0, 0, 0);
     }
 }
 
@@ -56,12 +70,12 @@
 
     header a:hover
     {
-        color: #eeeeee;
+        color: #8b8b8b;
     }
 
     header a:active
     {
-        color: #777777;
+        color: #666666;
     }
 
     header a:visited
@@ -85,7 +99,7 @@ header
     border-bottom-color: grey;
     border-bottom-width: 1px;
 
-    overflow: hidden; /* Prevents header from scrolling down */
+    position: fixed; /* Prevents header from scrolling down */
 
     flex-wrap: wrap;
 }

@@ -13,14 +13,28 @@ form.contact-form label
 
 form.contact-form .submit-button
 {
+    font-size: 12pt;
+    padding: 4pt 12pt;
+}
+
+form.contact-form .submit-button
+{
     font-size: 24pt;
     width: auto;
     align-self: center;
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 12pt;
+    border-radius: 4pt;
 }
+
+form.contact-form .submit-button
+{
+    background-color: white(136, 199, 136);
+}
+
+
+
 
 form.contact-form .input-bar
 {
@@ -28,10 +42,76 @@ form.contact-form .input-bar
 
     border-style: solid;
     border-width: 1px;
-    border-radius: 12pt;
 
     padding: 12pt 12pt;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: light)
+{
+    form.contact-form .input-bar, form.contact-form .submit-button
+    {
+        background-color: rgb(218, 218, 218);
+    }
+
+    form.contact-form input, form.contact-form select, form.contact-form textarea
+    {
+        color: black;
+    }
+
+    form.contact-form input:focus,  form.contact-form textarea:focus
+    {
+        color: black;
+    }
+
+    form.contact-form input::placeholder,  form.contact-form textarea::placeholder
+    {
+        color: rgb(83, 83, 83);
+    }
+
+    form.contact-form .submit-button:hover
+    {
+        background-color: rgb(136, 199, 136);
+    }
+
+form.contact-form .submit-button:active
+{
+    background-color: rgb(199, 81, 81);
+}
+}
+
+@media (prefers-color-scheme: dark)
+{
+    form.contact-form .input-bar, form.contact-form .submit-button
+    {
+        background-color: #444444;
+
+    }
+
+    form.contact-form input, form.contact-form select, form.contact-form textarea
+    {
+        color: white;
+    }
+
+    form.contact-form input:focus, form.contact-form textarea:focus
+    {
+        color: white;
+    }
+
+    form.contact-form input::placeholder,  form.contact-form textarea::placeholder
+    {
+        color: rgb(206, 206, 206);
+    }
+
+    form.contact-form .submit-button:hover
+    {
+        background-color: rgb(17, 114, 17);
+    }
+
+    form.contact-form .submit-button:active
+    {
+        background-color: rgb(158, 19, 19);
+    }
 }
 
 @media screen and (max-width: 360px)
@@ -39,21 +119,5 @@ form.contact-form .input-bar
     form.contact-form .input-bar
     {
         font-size: 12pt;
-    }
-}
-
-@media (prefers-color-scheme: dark)
-{
-    form.contact-form
-    {
-        background-color: pink;
-    }
-}
-
-@media (prefers-color-scheme: dark)
-{
-    form.contact-form
-    {
-        background-color: darkviolet;
     }
 }

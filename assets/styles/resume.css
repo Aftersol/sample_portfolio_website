@@ -1,0 +1,63 @@
+.resume-bar
+{
+    font-size: 24pt;
+    padding: 12pt;
+    
+}
+
+.align-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+.resume-bar a
+{    
+    text-decoration: none;
+    
+}
+
+@media (prefers-color-scheme: light) {
+
+    .resume-bar a
+    {
+        color: black;
+    }
+
+    .resume-bar a:hover
+    {
+        color: #4b4a4a;
+    }
+
+    .resume-bar a:active
+    {
+        color: #b6b6b6;
+    }
+
+    .resume-bar a:visited
+    {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .resume-bar a
+    {
+        color: white;
+    }
+
+    .resume-bar a:hover
+    {
+        color: #8b8b8b;
+    }
+
+    .resume-bar a:active
+    {
+        color: #666666;
+    }
+
+    .resume-bar a:visited
+    {
+        color: white;
+    }
+}
