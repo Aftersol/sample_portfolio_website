@@ -12,26 +12,43 @@
     }
 }
 
+article
+{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+
+    border-style: solid;
+    border-color: grey;
+}
+
 @media screen and (max-width: 767px) {
     article
     {
         width:100%;
+
+        margin-top: 52pt;
+        border-width: 0px;
+        border-bottom-width: 1px;
     }
+}
+
+@media screen and (max-width: 360px)
+{
+    article
+    {
+        margin-top: 28pt;
+    }    
 }
 
 @media screen and (min-width: 768px) {
     article
     {
+        margin-top: 72pt;
         width:80%;
-        margin-top: 12pt;
-    }
-}
+        border-width: 1px;
 
-article
-{
-    border-style: solid;
-    border-width: 1px;
-    border-color: grey;
+    }
 }
 
 article div.main-article
@@ -39,10 +56,3 @@ article div.main-article
     padding: 12pt;
 }
 
-@media screen and (min-width: 768px)
-{
-    div.main-article h1 
-    {
-        font-size: 36pt;
-    }
-}
