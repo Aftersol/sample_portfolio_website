@@ -10,11 +10,15 @@
 .gallery .image-container
 {
     background-color: #444444;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
+    align-self: flex-start;
+
     padding: 4pt;
-    flex: 0 0 30%;
+
     margin-bottom: 8pt;
 }
 
@@ -25,7 +29,7 @@
 
 .gallery .image-container img
 {
-    width: 100%
+    width: 100%;
 }
 
 .gallery .image-container .gallery-description
@@ -34,10 +38,29 @@
     text-align: center;
 }
 
+/* Basic system of scaling down the gallery based on level of details depending on horizontal resolution */
+
+@media screen and (max-width: 479px)
+{
+    .gallery .image-container
+    {
+        flex: 0 0 100%;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px)
+{
+    .gallery .image-container
+    {
+        flex: 0 0 45%;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .gallery .image-container
     {
         font-size: 24pt;
+        flex: 0 0 30%;
     }
 }
 

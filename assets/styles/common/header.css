@@ -15,6 +15,7 @@
     {
         font-size: 24pt;
         margin-bottom: 12pt;
+        box-shadow: 0px 0.125rem 0.75rem 0.5rem rgb(70 70 70 / 34%);
     }
 
     header .header-menu, header .header-icon
@@ -102,6 +103,8 @@ header
     position: fixed; /* Prevents header from scrolling down */
 
     flex-wrap: wrap;
+
+
 }
 
 header a
