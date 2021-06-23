@@ -10,27 +10,29 @@
         <link rel="stylesheet" href="assets/styles/common/common.css">
         <link rel="stylesheet" href="assets/styles/common/article.css">
         <link rel="stylesheet" href="assets/styles/common/footer.css">
+        <link rel="stylesheet" href="assets/styles/common/border.css">
 
         <link rel="stylesheet" href="assets/styles/common/gallery.css">
         
-        <title>Home</title>
+        <title>My Codebase</title>
     </head>
     <body>
         <main>
-            <header>
+            <header class="web-border-color" id="dropdown">
                 <div class="header-icon">
                     <a href="index.html">
                         <img src="assets/images/icon/icon.png">
                     </a>
                 </div>
-                <div class="header-menu">
+                <a href="javascript:void(0);" class="header-dropdown-icon" onclick="onClickHeader()">&#9776</a>
+                <div class="header-menu web-border-color">
                     <a class="link-button" href="index.html">Home</a>
                     <a class="link-button" href="about.html">About</a>
                     <a class="link-button" href="portfolio.html">Portfolio</a>
                     <a class="link-button" href="contact.html">Contact</a>
                 </div>
-            </header> 
-            <article>
+            </header>
+            <article class="web-border-color">
                 <div class="title-bar align-center">
                     <h1>Code</h1>
                 </div>
@@ -87,7 +89,9 @@
                     </div>
                 </div>
             </article>
-            <footer>Copyright 2021</footer>
+            <footer>Copyright 2021 Made with Squarespace?</footer>
         </main>
+
+        <script src="assets/scripts/header.js"></script>
     </body>
 </html>

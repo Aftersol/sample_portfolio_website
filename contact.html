@@ -13,26 +13,48 @@
         <link rel="stylesheet" href="assets/styles/common/common.css">
         <link rel="stylesheet" href="assets/styles/common/article.css">
         <link rel="stylesheet" href="assets/styles/common/footer.css">
+        <link rel="stylesheet" href="assets/styles/common/border.css">
+
         <link rel="stylesheet" href="assets/styles/contact.css">
+
+        <!-- Load ReCaptcha script to prevent most spambots : https://stackoverflow.com/a/60036326 -->
+        <script src="https://www.google.com/recaptcha/api.js?render=your-site-key-here"></script>
 
         <title>Contact</title>
     </head>
     <body>
+        <script>
+            grecaptcha.ready(function() {
+              grecaptcha.execute('your-site-key-here', {action: 'homepage'}).then(function(token) {
+                 // console.log(token);
+                 document.getElementById("token").value = token;
+              });
+              // refresh token every minute to prevent expiration
+              setInterval(function(){
+                grecaptcha.execute('your-site-key-here', {action: 'homepage'}).then(function(token) {
+                  console.log( 'refreshed token:', token );
+                  document.getElementById("token").value = token;
+                });
+              }, 60000);
+          
+            });
+          </script>        
         <main>
-            <header>
+            <header class="web-border-color" id="dropdown">
                 <div class="header-icon">
                     <a href="index.html">
                         <img src="assets/images/icon/icon.png">
                     </a>
                 </div>
-                <div class="header-menu">
+                <a href="javascript:void(0);" class="header-dropdown-icon" onclick="onClickHeader()">&#9776</a>
+                <div class="header-menu web-border-color">
                     <a class="link-button" href="index.html">Home</a>
                     <a class="link-button" href="about.html">About</a>
                     <a class="link-button" href="portfolio.html">Portfolio</a>
                     <a class="link-button" href="contact.html">Contact</a>
                 </div>
-            </header> 
-            <article>
+            </header>
+            <article class="web-border-color">
                 <div class="title-bar align-center">
                     <h1>Contact Me</h1>
                 </div>
@@ -52,15 +74,30 @@
                         <input class="input-bar" type="text" id="email" name="email" placeholder="Your email ...">
                     
                         <label for="subject">Subject</label>
-                        <textarea class="input-bar" id="subject" name="subject" placeholder="Write something ..." style="height:500px"></textarea>
-                        
-                        <!-- Disabled because we didn't set up the infrastructure for the contact yet -->
-                        <input class="submit-button" type="submit" value="Submit">
+                        <input class="input-bar" id="subject" name="subject" placeholder="Subject ..."></textarea>
+
+                        <label for="message">Message</label>
+                        <textarea class="input-bar" id="message" name="message" placeholder="Write something ..." style="height:500px"></textarea>
+
+                        <!-- ReCaptcha button -->
+                        <input
+                            class="submit-button g-recaptcha" 
+                            data-sitekey="reCAPTCHA_site_key" 
+                            data-callback='onSubmit' 
+                            data-action='submit'
+                            type="submit" 
+                            value="Submit"
+                        >
+
+                        <!-- hidden reCaptcha token input -->
+                        <input type="hidden" id="token" name="token">
                     
                     </form>
                 </div>
             </article>
-            <footer>Copyright 2021</footer>
+            <footer>Copyright 2021 Made with Squarespace?</footer>
         </main>
+
+        <script src="assets/scripts/header.js"></script>
     </body>
 </html>

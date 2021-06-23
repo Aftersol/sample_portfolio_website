@@ -2,20 +2,67 @@
     header
     {
         font-size: 12pt;
+        display: flex;
+        flex-direction: column;
     }
 
     header .header-menu, header .header-icon
     {
-        padding: 0 12pt;
+        padding: 0 0pt;
     }
+
+    header .header-menu
+    {
+        display: none;
+    }
+
+    header.responsive .header-menu
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header.responsive .header-menu a, .header-dropdown-icon
+    {
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+    }
+
+    header.responsive .header-dropdown-icon
+    {
+        display: flex;
+    }
+
+    header.responsive .header-menu
+    {
+        width: 100%;
+
+        border-style: solid;
+
+        border-width: 0px;
+        border-top-width: 1px;
+    }
+
+    .header-menu a
+    {
+        display: flex;
+        width: 100%;
+
+        justify-content: center;
+        align-content: center;
+    }
+    
 }
 
 @media screen and (min-width: 768px) {
     header
     {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
         font-size: 24pt;
         margin-bottom: 12pt;
-        box-shadow: 0px 0.125rem 0.75rem 0.5rem rgb(70 70 70 / 34%);
     }
 
     header .header-menu, header .header-icon
@@ -28,6 +75,11 @@
         padding-right: 6pt;
         padding-left: 6pt;
 
+    }
+
+    .header-dropdown-icon
+    {
+        display: none;
     }
 }
 
@@ -89,7 +141,6 @@ header
 {
     display: flex;
     
-    justify-content: space-between;
     align-items: center;
 
     width: 100%;
@@ -97,13 +148,13 @@ header
     /* Borders for the header */
     border-style: solid;
     border-width: 0px;
-    border-bottom-color: grey;
     border-bottom-width: 1px;
 
     position: fixed; /* Prevents header from scrolling down */
 
     flex-wrap: wrap;
 
+    box-shadow: 0px 0.125rem 0.75rem 0.5rem rgb(70 70 70 / 34%);
 
 }
 
@@ -127,6 +178,12 @@ header a
     }
 }
 
+header .mobile-header-menu
+{
+    display: flex;
+    border-radius: 0px;
+    border-style: none;
+}
 
 
 
