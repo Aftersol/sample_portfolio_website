@@ -1,4 +1,4 @@
-form.contact-form
+/*form.contact-form
 {
     display: flex;
     flex-direction: column;
@@ -116,5 +116,39 @@ form.contact-form .submit-button:active
     form.contact-form .input-bar
     {
         font-size: 12pt;
+    }
+}*/
+
+.social-media-links
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.social-media-links .social-media-box 
+{
+    padding: 12pt;
+    width: 25vw;
+}
+
+.social-media-links .social-media-box img
+{
+    padding: 12pt;
+    flex: 0 0 25%;
+    width: 25vw;
+    height: fit-content;
+}
+
+@media screen and (min-width: 768px) {
+    .social-media-links .social-media-box 
+    {
+        padding: 12pt;
+        width: 15vw;
+    }
+    .social-media-links .social-media-box img
+    {
+        width: 15vw;
+        align-self: center;
     }
 }

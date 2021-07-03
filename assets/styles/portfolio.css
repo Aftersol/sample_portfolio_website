@@ -13,11 +13,6 @@
 
 }
 
-.portfolio-selection a
-{
-    text-decoration: none;
-}
-
 @media (prefers-color-scheme: light) 
 {
     .portfolio-selection a
@@ -77,6 +72,7 @@
 
 .portfolio-art-selection, .portfolio-code-selection
 {
+    /* Align the text to the center of the screen with background*/
     align-items: center;
 
     background-repeat: no-repeat;
@@ -89,7 +85,7 @@
     .portfolio-art-selection, .portfolio-code-selection
     {
         width: 100vw;
-        height: 100vw;
+        height: 100vh;
     }
 
     .portfolio-selection
@@ -102,9 +98,9 @@
 @media screen and (min-width: 768px) {
     .portfolio-art-selection, .portfolio-code-selection
     {
-        /* Attempt at a square background image using flex */
+        /* Make this take up the half the screen*/
         width: 50vw;
-        height: 30vw;
+        height: 100vh;
     }
 
     .portfolio-selection
@@ -112,4 +108,9 @@
         font-size: 48pt;
         flex-direction: row;
     }
+}
+
+.portfolio-selection a
+{
+    text-decoration: none;
 }
