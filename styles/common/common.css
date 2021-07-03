@@ -1,0 +1,123 @@
+body,html
+{    
+    margin: 0 0;
+    height: 100%;
+	
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+
+}
+.web-border-color
+{
+	border-color: white;
+}
+.align-center
+{
+    display: flex;
+    align-content: center;
+}
+
+.justify-center
+{
+    display: flex;
+    justify-content: center;
+}
+
+@font-face
+{
+	font-family: Josefin;
+	src: url("../../fonts/josefin/static/JosefinSans-Regular.ttf") format("truetype");
+}
+
+@font-face
+{
+	font-family: Josefin-Bold;
+	src: url("../../fonts/josefin/static/JosefinSans-SemiBold.ttf") format("truetype");
+}
+article, footer
+{
+	font-family: Josefin, Arial, Helvetica, sans-serif;
+}
+
+header
+{
+	font-family: Josefin-Bold, Arial, Helvetica, sans-serif;
+}
+
+article p
+{
+	font-size: 18pt;
+}
+
+@media (prefers-color-scheme: light) {
+    body
+    {
+        color: black;
+        background-color: #eeeeee;
+    }
+	
+	a
+    {
+        color: black;
+    }
+
+    a:hover
+    {
+        color: #4b4a4a;
+    }
+
+    a:active
+    {
+        color: #b6b6b6;
+    }
+
+    a:visited
+    {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body
+    {
+        color: white;
+        background-color: #222222;
+    }
+	
+	a
+    {
+        color: white;
+    }
+
+    a:hover
+    {
+        color: #8b8b8b;
+    }
+
+    a:active
+    {
+        color: #666666;
+    }
+
+    a:visited
+    {
+        color: white;
+    }
+}
+
+
+
+@media screen and (min-width: 768px)
+{
+    div.title-bar h1 
+    {
+        font-size: 36pt;
+    }
+}
+
