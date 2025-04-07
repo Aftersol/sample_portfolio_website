@@ -6,7 +6,7 @@
         <!-- No search engine robots please -->
         <meta name="robots" content="noindex">
 
-        <link rel="icon" href="assets/images/icon/icon.png">
+        <link rel="icon" href="assets/images/icons/website/icon.png">
 
         <!-- Common stylesheets -->
         <link rel="stylesheet" href="assets/styles/common/header.css">
@@ -16,15 +16,15 @@
         <link rel="stylesheet" href="assets/styles/common/border.css">
 
         <link rel="stylesheet" href="assets/styles/common/gallery.css">
-        
-        <title>My Codebase</title>
+
+        <title>Code</title>
     </head>
     <body>
         <main>
             <header class="web-border-color" id="dropdown">
                 <div class="header-icon">
                     <a href="index.html">
-                        <img src="assets/images/icon/icon.png">
+                        <img src="assets/images/icons/website/icon.png">
                     </a>
                 </div>
                 <a href="javascript:void(0);" class="header-dropdown-icon" onclick="onClickHeader()">&#9776</a>
@@ -36,65 +36,38 @@
                 </div>
             </header>
             <article class="web-border-color">
-                <div class="title-bar align-center">
-                    <h1>Code</h1>
+                <div class="title-bar justify-center">
+                    
                 </div>
-                <div class="main-article">
+                <div class="main-article gallery" style="padding:0;">
                     <div class="gallery">
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png">
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
-                            </div>
-                        </div>
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png">
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
+                        <div class="gallery-item gallery-left">
+							<picture>
+								<source type="image/avif" srcset="assets/images/photos/art.avif">
+								<image src="assets/images/photos/art.png">
+							</picture>
+                            <div class="gallery-description">
+                                <p>A beautiful Minecraft terrain.
+                                    It's is pack.png whose seed was discovered in 2020 by the <a href ="https://packpng.com/">pack.png project</a>
+                                    with the help of <a href="https://minecraftathome.com/minecrafthome/">Minecraft@Home</a>.</p>
                             </div>
                         </div>
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png" >
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
-                            </div>
-                        </div>
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png">
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
-                            </div>
-                        </div>
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png">
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
-                            </div>
-                        </div>
-                        <div class="image-container">
-                            <div class="gallery-image align-center">
-                                <img alt="Test Image" src="assets/images/photos/square.png">
-                            </div>
-                            <div class="gallery-description align-center">
-                                <p>This is a test. This is always a test.</p>
+                        <div class="gallery-item gallery-right">
+							<picture>
+								<source type="image/jpeg" srcset="assets/images/photos/code.jpg">
+								<image src="assets/images/photos/code.jpg">
+							</picture>
+                            <div class="gallery-description">
+                                <p>Some super secret coding project :P</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </article>
-            <footer>Copyright 2021 Made with Squarespace?</footer>
+            <footer><p>Copyright 2021 <a href="https://www.squarespace.com"> Made with Squarespace?</a></p></footer>
         </main>
 
         <script src="assets/scripts/header.js"></script>
+
     </body>
 </html>

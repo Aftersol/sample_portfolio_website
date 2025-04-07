@@ -3,3 +3,8 @@ footer
     display: flex;
     padding: 12pt;
 }
+
+footer a
+{
+	text-decoration: none;
+}

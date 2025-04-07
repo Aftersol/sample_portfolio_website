@@ -1,4 +1,4 @@
-.gallery
+/*.gallery
 {
     display: flex;
     flex-direction: row;
@@ -40,7 +40,7 @@
 
 /* Basic system of scaling down the gallery based on level of details depending on horizontal resolution */
 
-@media screen and (max-width: 479px)
+/*@media screen and (max-width: 479px)
 {
     .gallery .image-container
     {
@@ -62,5 +62,59 @@
         font-size: 24pt;
         flex: 0 0 30%;
     }
+}*/
+
+.gallery-item
+{
+    display: flex;
+    
 }
 
+@media (prefers-color-scheme: dark) {
+    .gallery-description
+    {
+        background-color: #333333;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .gallery-description
+    {
+        background-color: white;
+    }
+}
+
+
+@media screen and (max-width: 767px)
+{
+    .gallery-item
+    {
+        flex-direction: column;
+    }
+    .gallery-item img, .gallery-item .gallery-description
+    {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .gallery-item.gallery-left
+    {
+        flex-direction: row;
+    }
+    .gallery-item.gallery-right
+    {
+        flex-direction: row-reverse;
+    }
+    .gallery-item img, .gallery-item .gallery-description
+    {
+        width: 50%;
+    }
+
+    .gallery-item .gallery-description
+    {
+        padding: 12pt;
+    }
+}
